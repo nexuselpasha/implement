@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loader Hub | Güvenli Loader İletim Portalı</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom Styling -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="bg-[#080c14] text-gray-100 bg-grid relative selection:bg-indigo-500 selection:text-white">
+
+  <!-- Ambient Glow Effects -->
+  <div class="glow-orb-1"></div>
+  <div class="glow-orb-2"></div>
+
+  <!-- Header / Navigation (No Admin Link Present!) -->
+  <header class="relative z-20 border-b border-gray-800/80 bg-[#080c14]/80 backdrop-blur-md sticky top-0">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <div class="flex items-center space-x-3 cursor-pointer" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-cyan-400 flex items-center justify-center shadow-lg shadow-indigo-500/30 border border-white/20">
+          <i class="fa-solid fa-bolt text-white text-lg"></i>
+        </div>
+        <div>
+          <span class="text-xl font-extrabold tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-200 to-gray-400">
+            LOADER<span class="text-indigo-400">HUB</span>
+          </span>
+          <span class="hidden sm:inline-block ml-2 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 rounded-full">
+            PORTAL v2.5
+          </span>
+        </div>
+      </div>
+
+      <!-- Right Actions -->
+      <div class="flex items-center space-x-4">
+        <!-- Live System Status -->
+        <div class="hidden md:flex items-center space-x-2 px-3 py-1.5 rounded-full bg-emerald-950/40 border border-emerald-500/20 text-xs text-emerald-400 font-medium">
+          <span class="pulse-dot"></span>
+          <span>SİSTEM AKTİF // İLETİM AÇIK</span>
+        </div>
+
+        <!-- Discord Button -->
+        <a href="https://discord.gg/emEMXQCjba" target="_blank" rel="noopener noreferrer" 
+           class="flex items-center space-x-2 px-4 py-2 rounded-xl bg-[#5865F2]/10 hover:bg-[#5865F2]/20 border border-[#5865F2]/30 text-[#828cf5] hover:text-white transition duration-200 text-sm font-semibold">
+          <i class="fa-brands fa-discord text-base"></i>
+          <span class="hidden sm:inline">Discord</span>
+        </a>
+
+        <!-- Main CTA in Nav -->
+        <button onclick="openSubmitModal()" 
+                class="btn-cyber-primary px-5 py-2.5 rounded-xl font-bold text-sm tracking-wide text-white flex items-center space-x-2">
+          <i class="fa-solid fa-cloud-arrow-up"></i>
+          <span>LOADER İLET</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-24">
+    
+    <div class="text-center max-w-3xl mx-auto pt-8">
+      
+      <!-- Top Badge -->
+      <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-xs font-semibold mb-6">
+        <i class="fa-solid fa-shield-halved text-cyan-400"></i>
+        <span>GÜVENLİ & HIZLI LOADER İLETİM SİSTEMİ</span>
+      </div>
+
+      <!-- Main Heading -->
+      <h1 class="text-4xl sm:text-6xl font-black tracking-tight text-white leading-tight mb-6">
+        Loader'ınızı <br class="hidden sm:inline"/>
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-cyan-300 to-indigo-300">
+          Doğrudan Yöneticiye İletin
+        </span>
+      </h1>
+
+      <!-- Description -->
+      <p class="text-base sm:text-lg text-gray-400 mb-10 leading-relaxed font-normal">
+        Test edilmesi, incelenmesi veya toplulukla paylaşılması gereken loader ve yazılımlarınızı ister 
+        <strong class="text-gray-200">doğrudan dosya yükleyerek</strong>, ister <strong class="text-gray-200">indirme linki olarak</strong> anında iletin. 
+        Gönderimden hemen sonra topluluk Discord sunucumuza bağlanabilirsiniz.
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <button onclick="openSubmitModal()" 
+                class="w-full sm:w-auto btn-cyber-primary px-8 py-4 rounded-2xl font-extrabold text-base tracking-wide text-white flex items-center justify-center space-x-3 group">
+          <i class="fa-solid fa-paper-plane text-cyan-300 group-hover:translate-x-1 transition-transform"></i>
+          <span>HEMEN LOADER İLET</span>
+        </button>
+
+        <a href="https://discord.gg/emEMXQCjba" target="_blank" rel="noopener noreferrer" 
+           class="w-full sm:w-auto px-8 py-4 rounded-2xl glass-panel hover:bg-gray-800/80 border border-gray-700 font-bold text-base text-gray-300 hover:text-white flex items-center justify-center space-x-3 transition">
+          <i class="fa-brands fa-discord text-[#5865F2] text-xl"></i>
+          <span>Discord Topluluğu</span>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Feature Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-20">
+      
+      <!-- Card 1 -->
+      <div class="glass-panel glass-panel-hover p-6 rounded-2xl relative overflow-hidden">
+        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center text-xl mb-4">
+          <i class="fa-solid fa-file-zipper"></i>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">Doğrudan Dosya Yükleme</h3>
+        <p class="text-sm text-gray-400 leading-relaxed">
+          EXE, ZIP, RAR, 7Z ve benzeri formatlardaki loader dosyalarınızı yüksek hızla doğrudan sunucuya yükleyebilirsiniz.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="glass-panel glass-panel-hover p-6 rounded-2xl relative overflow-hidden">
+        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center text-xl mb-4">
+          <i class="fa-solid fa-link"></i>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">Bağlantı & Bulut Desteği</h3>
+        <p class="text-sm text-gray-400 leading-relaxed">
+          Mega, Google Drive, Mediafire veya Discord linklerini direkt paylaşarak loader'ınızı iletebilirsiniz.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="glass-panel glass-panel-hover p-6 rounded-2xl relative overflow-hidden">
+        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl mb-4">
+          <i class="fa-brands fa-discord"></i>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">Otomatik Discord Yönlendirme</h3>
+        <p class="text-sm text-gray-400 leading-relaxed">
+          Gönderiminiz tamamlandığı anda sistem otomatik olarak Discord sunucumuzu açar ve yetkililerle doğrudan iletişim kurabilirsiniz.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- How it works Banner -->
+    <div class="mt-16 glass-panel rounded-2xl p-8 border border-indigo-500/20 relative overflow-hidden">
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-6">
+        <div>
+          <h2 class="text-2xl font-bold text-white mb-2 flex items-center gap-2">
+            <i class="fa-solid fa-circle-info text-indigo-400"></i>
+            Loader İletirken Nelere Dikkat Edilmeli?
+          </h2>
+          <p class="text-gray-400 text-sm max-w-2xl">
+            Gönderdiğiniz loader ile ilgili not kısmına sürüm, kullanım bilgisi veya gerekli ek dosyaları yazmanız inceleme sürecini hızlandıracaktır.
+          </p>
+        </div>
+        <button onclick="openSubmitModal()" class="btn-cyber-cyan px-6 py-3 rounded-xl font-bold text-sm text-white shrink-0">
+          Loader Formunu Aç
+        </button>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Submit Loader Modal -->
+  <div id="submitModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300">
+    <div id="modalBox" class="glass-panel w-full max-w-xl rounded-3xl p-6 sm:p-8 border border-indigo-500/30 transform scale-95 transition-transform duration-300 max-h-[92vh] overflow-y-auto">
+      
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between pb-4 border-b border-gray-800">
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 rounded-xl bg-indigo-600/20 border border-indigo-500/30 text-indigo-400 flex items-center justify-center text-lg">
+            <i class="fa-solid fa-upload"></i>
+          </div>
+          <div>
+            <h2 class="text-xl font-extrabold text-white">Loader İlet</h2>
+            <p class="text-xs text-gray-400">Dosya yükleyin veya indirme linki paylaşın</p>
+          </div>
+        </div>
+        <button onclick="closeSubmitModal()" class="w-9 h-9 rounded-xl bg-gray-800/80 hover:bg-gray-700 text-gray-400 hover:text-white flex items-center justify-center transition">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <!-- Mode Selector Tabs (File vs Link) -->
+      <div class="grid grid-cols-2 gap-2 p-1.5 bg-gray-900/90 rounded-2xl border border-gray-800 my-5">
+        <button type="button" id="tabFileBtn" onclick="switchTab('file')" 
+                class="py-2.5 px-3 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center space-x-2 transition-all bg-indigo-600 text-white shadow-lg shadow-indigo-600/30">
+          <i class="fa-solid fa-file-arrow-up"></i>
+          <span>Dosya Yükle</span>
+        </button>
+        <button type="button" id="tabLinkBtn" onclick="switchTab('link')" 
+                class="py-2.5 px-3 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center space-x-2 transition-all text-gray-400 hover:text-white">
+          <i class="fa-solid fa-link"></i>
+          <span>İndirme Linki</span>
+        </button>
+      </div>
+
+      <!-- Form -->
+      <form id="submissionForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+        <input type="hidden" id="submissionType" name="submissionType" value="file">
+
+        <!-- Submitter Name -->
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-1.5">
+            Adınız veya Nickname <span class="text-gray-500 font-normal">(İsteğe bağlı)</span>
+          </label>
+          <div class="relative">
+            <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-gray-500 text-sm">
+              <i class="fa-solid fa-user"></i>
+            </span>
+            <input type="text" id="submitterName" name="submitterName" placeholder="Örn: GhostDev veya Anonim" 
+                   class="w-full bg-gray-900/80 border border-gray-700/80 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 rounded-xl pl-10 pr-4 py-2.5 text-sm text-white placeholder-gray-500 outline-none transition">
+          </div>
+        </div>
+
+        <!-- Contact / Discord Tag -->
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-1.5">
+            Discord / İletişim Bilginiz <span class="text-gray-500 font-normal">(Gerekirse size ulaşabilmemiz için)</span>
+          </label>
+          <div class="relative">
+            <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-gray-500 text-sm">
+              <i class="fa-brands fa-discord"></i>
+            </span>
+            <input type="text" id="contactInfo" name="contactInfo" placeholder="Örn: discord_kullaniciadi" 
+                   class="w-full bg-gray-900/80 border border-gray-700/80 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 rounded-xl pl-10 pr-4 py-2.5 text-sm text-white placeholder-gray-500 outline-none transition">
+          </div>
+        </div>
+
+        <!-- FILE UPLOAD SECTION -->
+        <div id="fileSection">
+          <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-1.5">
+            Loader Dosyası <span class="text-indigo-400">*</span>
+          </label>
+          <div id="dropZone" class="drop-zone rounded-2xl p-6 text-center cursor-pointer bg-gray-900/50 hover:bg-gray-900/80 transition relative"
+               onclick="document.getElementById('fileInput').click()">
+            <input type="file" id="fileInput" name="loaderFile" class="hidden" onchange="handleFileSelect(this)">
+            
+            <div id="dropPrompt">
+              <div class="w-12 h-12 mx-auto rounded-full bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xl mb-3">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+              </div>
+              <p class="text-sm font-semibold text-white mb-1">
+                Dosyayı buraya sürükleyin veya <span class="text-indigo-400 underline">gözatın</span>
+              </p>
+              <p class="text-xs text-gray-500">
+                Desteklenen formatlar: .exe, .zip, .rar, .7z, .dll, .bin (Maksimum 150 MB)
+              </p>
+            </div>
+
+            <!-- File Selected Info -->
+            <div id="fileSelectedInfo" class="hidden text-left flex items-center justify-between p-3 rounded-xl bg-indigo-950/40 border border-indigo-500/30">
+              <div class="flex items-center space-x-3 overflow-hidden">
+                <div class="w-10 h-10 rounded-lg bg-indigo-600 text-white flex items-center justify-center shrink-0">
+                  <i class="fa-solid fa-file-code"></i>
+                </div>
+                <div class="truncate">
+                  <p id="selectedFileName" class="text-sm font-bold text-white truncate">dosya.zip</p>
+                  <p id="selectedFileSize" class="text-xs text-gray-400">0 MB</p>
+                </div>
+              </div>
+              <button type="button" onclick="clearSelectedFile(event)" class="text-gray-400 hover:text-rose-400 p-2 transition">
+                <i class="fa-solid fa-trash-can"></i>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- LINK SECTION -->
+        <div id="linkSection" class="hidden">
+          <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-1.5">
+            İndirme Bağlantısı / Link <span class="text-cyan-400">*</span>
+          </label>
+          <div class="relative">
+            <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-gray-500 text-sm">
+              <i class="fa-solid fa-link"></i>
+            </span>
+            <input type="url" id="linkUrl" name="linkUrl" placeholder="https://mega.nz/... veya https://drive.google.com/..." 
+                   class="w-full bg-gray-900/80 border border-gray-700/80 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 rounded-xl pl-10 pr-4 py-2.5 text-sm text-white placeholder-gray-500 outline-none transition">
+          </div>
+          <p class="text-xs text-gray-500 mt-1">
+            Mega.nz, Mediafire, Google Drive, Discord CDN vb. direkt indirme linklerini girebilirsiniz.
+          </p>
+        </div>
+
+        <!-- Note / Description -->
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-gray-400 mb-1.5">
+            Not veya Açıklama <span class="text-gray-500 font-normal">(Opsiyonel)</span>
+          </label>
+          <textarea id="note" name="note" rows="3" placeholder="Loader'ın hangi oyun/sürüm için olduğu, çalıştırma talimatları vb..." 
+                    class="w-full bg-gray-900/80 border border-gray-700/80 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 rounded-xl p-3 text-sm text-white placeholder-gray-500 outline-none resize-none transition"></textarea>
+        </div>
+
+        <!-- Progress Bar (shown during upload) -->
+        <div id="uploadProgressContainer" class="hidden">
+          <div class="flex justify-between text-xs font-semibold mb-1">
+            <span class="text-indigo-400" id="uploadStatusText">Yükleniyor...</span>
+            <span class="text-gray-300" id="uploadPercentText">0%</span>
+          </div>
+          <div class="w-full h-2 bg-gray-800 rounded-full overflow-hidden">
+            <div id="uploadProgressBar" class="h-full bg-gradient-to-r from-indigo-500 to-cyan-400 w-0 transition-all duration-150"></div>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="pt-2">
+          <button type="submit" id="submitBtn" 
+                  class="w-full btn-cyber-primary py-3.5 px-4 rounded-xl font-extrabold text-sm tracking-wide text-white flex items-center justify-center space-x-2">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span id="submitBtnText">İLET VE DİSCORD'A KATIL</span>
+          </button>
+        </div>
+
+        <!-- Hint -->
+        <p class="text-[11px] text-center text-gray-500">
+          <i class="fa-solid fa-shield text-indigo-400"></i> Gönderim yapıldığında otomatik olarak Discord sunucumuz açılacaktır.
+        </p>
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- Success & Discord Modal -->
+  <div id="successModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300">
+    <div class="glass-panel w-full max-w-md rounded-3xl p-8 border border-emerald-500/40 text-center transform scale-95 transition-transform duration-300 shadow-2xl shadow-emerald-500/10">
+      
+      <!-- Animated Check Icon -->
+      <div class="w-20 h-20 mx-auto rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-3xl mb-5 shadow-lg shadow-emerald-500/20">
+        <i class="fa-solid fa-check"></i>
+      </div>
+
+      <h3 class="text-2xl font-black text-white mb-2">Başarıyla İletildi!</h3>
+      <p class="text-sm text-gray-300 mb-6 leading-relaxed">
+        Loader bilginiz yöneticiye ulaştırıldı. Discord sunucumuz yeni sekmede açılıyor...
+      </p>
+
+      <div class="p-4 rounded-2xl bg-indigo-950/40 border border-indigo-500/20 mb-6 text-xs text-indigo-300 flex items-center space-x-3 text-left">
+        <i class="fa-brands fa-discord text-2xl text-[#5865F2]"></i>
+        <span>Tarayıcınız yönlendirmeyi engellediyse aşağıdaki butona tıklayabilirsiniz.</span>
+      </div>
+
+      <div class="space-y-3">
+        <a id="discordDirectLink" href="https://discord.gg/emEMXQCjba" target="_blank" rel="noopener noreferrer"
+           class="w-full py-3.5 px-4 rounded-xl bg-[#5865F2] hover:bg-[#4752C4] text-white font-extrabold text-sm flex items-center justify-center space-x-2 transition shadow-lg shadow-indigo-600/30">
+          <i class="fa-brands fa-discord text-lg"></i>
+          <span>DİSCORD SUNUCUSUNA GİT</span>
+        </a>
+
+        <button onclick="closeSuccessModal()" class="w-full py-3 px-4 rounded-xl bg-gray-800 hover:bg-gray-700 text-gray-300 text-xs font-semibold transition">
+          Kapat
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toastContainer" class="fixed bottom-6 right-6 z-50 flex flex-col space-y-3 pointer-events-none"></div>
+
+  <!-- Footer (NO ADMIN LINK AS PER STRICT REQUIREMENT) -->
+  <footer class="relative z-10 border-t border-gray-800/80 bg-[#060910] py-8 text-center text-xs text-gray-500">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center space-x-2">
+        <div class="w-5 h-5 rounded-md bg-indigo-600 flex items-center justify-center text-white text-[10px] font-bold">L</div>
+        <span class="font-bold text-gray-400">Loader Hub &copy; 2026</span>
+      </div>
+      <p class="text-gray-500">
+        Tüm gönderimler şifreli ortamda saklanır ve yalnızca yetkililer tarafından görüntülenir.
+      </p>
+      <div class="flex items-center space-x-4">
+        <a href="https://discord.gg/emEMXQCjba" target="_blank" class="hover:text-indigo-400 transition">
+          <i class="fa-brands fa-discord"></i> Discord
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/js/app.js"></script>
+</body>
+</html>

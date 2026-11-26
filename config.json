@@ -1,0 +1,7 @@
+{
+  "port": 3000,
+  "adminPath": "/secret-admin",
+  "adminPassword": "admin",
+  "discordUrl": "https://discord.gg/emEMXQCjba",
+  "maxFileSizeMB": 150
+}
